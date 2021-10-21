@@ -1,0 +1,100 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+        <div class="sidebar">
+            <h1 class="title">
+                Lists
+            </h1>
+            <div class="list-menu">
+                <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]" routerLinkActive="is-active">
+                    <p>{{list.title}}</p>
+                </a>
+            </div>
+            <button class="button is-info has-text-white" routerLink="/new-list">+ New List</button>
+        </div>
+
+        <div class="task-list-container has-background-light" style="overflow-y:auto;">
+            <div *ngIf="coins; else elseBlock" >
+                <div class="top-bar">
+                    <h1 class="title ">
+                        Coins
+                    </h1>
+                    <div class="dropdown is-hoverable is-right">
+                        <div class="dropdown-trigger">
+                          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                            <span class="icon is-small">
+                              <i class="fas fa-cog" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div (click)="onRefreshClick()"class="dropdown-content">
+                                <a class="dropdown-item">
+                                  Refresh
+                                </a>
+                            </div>
+                          <div (click)="onDeleteListClick()"class="dropdown-content">
+                              <a class="dropdown-item has-text-danger">
+                                Delete
+                              </a>
+                          </div>
+                          <div (click)="onLogoutListClick()"class="dropdown-content">
+                            <a class="dropdown-item">
+                              Logout
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- List Elements -->
+                <!-- <div class="task" *ngFor="let coin of coins" (click)="onCoinClick(coin)" [ngClass]="{'completed': coin.completed}"> -->
+                <div class="task" *ngFor="let coin of coins">     
+                    <div class="task-text">
+                        <div class="column">{{coin.title}}</div>
+                        <div class="column">${{coin.price}}</div>
+                        <div class="column" *ngIf="coin.change >= 0; else elsenegative"  style="color: limegreen">{{coin.change}}% <img src="../../../assets/images (2).jpg" class = "imgplus" alt="image"></div>
+                        <ng-template #elsenegative>
+                            <div class="column" style="color: red;">{{coin.change}}% <img src="../../../assets/red.png" class = "imgplus" alt="image"></div>
+                        </ng-template>
+                      
+                    </div>
+                    <div class="task-buttons">
+                        <button class="button is-danger" (click)="onDeleteCoinClick(coin._id)" style="margin-left: 10px;">
+                          <div class="icon">
+                            <i class="fas fa-trash"></i>
+                          </div>
+                        </button>
+            
+                    </div>
+                </div>
+                <h3 class="empty-state-text" *ngIf="coins.length ===0">No coins here. Add a coin with the plus button</h3>
+                <button routerLink="./new-coin" class="circle-add-button button is-primary has-text-white">
+                    +
+                </button>
+            </div>
+            <ng-template #elseBlock>
+                <div class="top-bar">
+                    <div class="dropdown is-hoverable is-right">
+                        <div class="dropdown-trigger">
+                          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                            <span class="icon is-small">
+                              <i class="fas fa-cog" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                          <div (click)="onLogoutListClick()"class="dropdown-content">
+                            <a class="dropdown-item">
+                              Logout
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="empty-state-text">Please select a list from the sidebar</h3>
+            </ng-template>
+
+        </div>
+    </div>
+</div>
