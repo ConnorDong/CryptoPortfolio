@@ -33,7 +33,7 @@ export class NewCoinComponent implements OnInit {
       this.router.navigate(['../'], {relativeTo: this.route}, 
       );
     }, (err)=>{
-      alert('Coin cannot be created Please check spelling')
+      alert('Coin cannot be created,  Please check spelling. Note not all coins are supported at this time.')
     }
     )
 
