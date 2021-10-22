@@ -4,9 +4,7 @@
 This project is hosted on https://www.cportfolio.net/
 
 Use this to track your crypto portfolio and get updated with real time prices.
-
-
-
+Registration is free!
 
 
 
