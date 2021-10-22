@@ -5,7 +5,7 @@ This project is hosted on https://www.cportfolio.net/
 
 Use this to track your crypto portfolio and get updated with real time prices.
 Registration is free!
-<div><img src="https://github.com/ConnorDong/CryptoPortfolio/blob/master/Screenshot%202021-10-21%20210655.png" width="25%" height="25%"></div>
+<div><img src="https://github.com/ConnorDong/CryptoPortfolio/blob/master/Screenshot%202021-10-21%20210655.png" width="50%" height="50%"></div>
 
 ## Development server
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
