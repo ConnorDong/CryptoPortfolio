@@ -5,7 +5,7 @@ This project is hosted on https://www.cportfolio.net/
 
 Use this to track your crypto portfolio and get updated with real time prices.
 Registration is free!
-<img src="https://github.com/ConnorDong/CryptoPortfolio/Screenshot 2021-10-21 210655.png" width="25%" height="25%">
+<img src="https://github.com/ConnorDong/CryptoPortfolio/blob/master/Screenshot%202021-10-21%20210655.png" width="25%" height="25%">
 
 
 ## Development server
