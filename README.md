@@ -5,7 +5,7 @@ This project is hosted on https://www.cportfolio.net/
 
 Use this to track your crypto portfolio and get updated with real time prices.
 Registration is free!
-Currently supported in Chrome
+Currently supported in Chrome.
 <div><img src="https://github.com/ConnorDong/CryptoPortfolio/blob/master/Screenshot%202021-10-21%20210655.png" width="100%" height="100%"></div>
 
 ## Development server
