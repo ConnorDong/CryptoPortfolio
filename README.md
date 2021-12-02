@@ -1,9 +1,14 @@
-# Frontend
+# CryptoPortfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+## Try it!
+This project is hosted on https://www.cportfolio.net/
+
+Use this to track your crypto portfolio and get updated with real time prices.
+Registration is free!
+<div><img src="https://github.com/ConnorDong/CryptoPortfolio/blob/master/Screenshot%202021-10-21%20210655.png" width="100%" height="100%"></div>
 
 ## Development server
-
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
