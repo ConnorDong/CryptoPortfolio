@@ -11,16 +11,18 @@ import { Router } from '@angular/router';
 export class SignupPageComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) { }
-
+  isLoading: boolean = false
   ngOnInit(): void {
   }
   onSignupButtonClicked(email:string, password:string) {
+    this.isLoading = true
     this.authService.signup(email, password).subscribe((res: HttpResponse<any>)=>{
       if(res.status === 200) {
         //logged in
         this.router.navigate(['/lists']);
       }
     }, (error)=>{
+        this.isLoading = false
         alert('Cannot sign in')
     })
   }

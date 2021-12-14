@@ -11,16 +11,18 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginpageComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) { }
-
+  isLoading: boolean = false
   ngOnInit(): void {
   }
   onLoginButtonClicked(email:string, password:string) {
+    this.isLoading = true
     this.authService.login(email, password).subscribe((res: HttpResponse<any>)=>{
       if(res.status === 200) {
         //logged in
         this.router.navigate(['/lists']);
       }
     }, (error)=>{
+        this.isLoading = false
         alert('Cannot log in')
     })
   }

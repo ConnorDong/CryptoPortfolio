@@ -9,7 +9,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewCoinComponent } from './pages/new-coin/new-coin.component';
 import { WebReqInterceptor } from './services/web-req.interceptor';
-import { AuthenticationModule } from './pages/authentication-module/authentication.module';
+import { AuthenticationModule } from './pages/authentication-module/authentication.module'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+ import { MatProgressBarModule} from '@angular/material/progress-bar'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { AuthenticationModule } from './pages/authentication-module/authenticati
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule, 
-    AuthenticationModule
+    AuthenticationModule, BrowserAnimationsModule, 
+    MatProgressBarModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: WebReqInterceptor, multi: true}],
   bootstrap: [AppComponent]

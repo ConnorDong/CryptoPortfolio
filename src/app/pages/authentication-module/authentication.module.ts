@@ -4,6 +4,7 @@ import { LoginpageComponent } from '../loginpage/loginpage.component';
 import { SignupPageComponent } from '../signup-page/signup-page.component';
 import { DefaultAuthComponent } from './default-auth/default-auth.component';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 
@@ -11,7 +12,8 @@ import { AuthenticationRoutingModule } from './authentication-routing.module';
   declarations: [LoginpageComponent, SignupPageComponent, DefaultAuthComponent],
   imports: [
     CommonModule, 
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule, 
+    MatProgressBarModule
   ]
 })
 export class AuthenticationModule { }
